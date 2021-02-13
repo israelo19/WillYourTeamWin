@@ -12,5 +12,7 @@ switcher.addEventListener('click', function() {
     else {
         this.textContent = "Light Mode";
     }
+    
+    console.log('current class name: ' + className);
 });
 
