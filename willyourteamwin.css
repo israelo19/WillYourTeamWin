@@ -1,4 +1,3 @@
-
 body {
   background-color: lightblue;
 }
@@ -14,4 +13,28 @@ p {
   text-align: center;
  }
  
+:root {
+  --green: #00FF00;
+  --white: #ffffff;
+  --black: #000000;
+  --lightblue: #ADD8E6
+ }
+ 
+ * {
+   color:var(--fontColor);
+   font-family: helvetica;
+}
 
+body {
+	background: var(--bg);
+}
+
+.light-theme {
+  --bg: var(--lightblue);
+  fontColor: var(--white);
+}
+
+.dark-theme {
+   --bg: var(--black);
+   --fontColor: var(--white);
+}   
