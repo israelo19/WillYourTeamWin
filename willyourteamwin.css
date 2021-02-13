@@ -1,9 +1,10 @@
+
 body {
-  background-color: lightblue;
+  background-color:white;
 }
 
 h1 {
-	color:White;
+	color:lightblue;
 	text-align: center;
 }
 
@@ -32,7 +33,7 @@ body {
 
 .light-theme {
   --bg: var(--lightblue);
-  --fontColor: var(--white);
+  --fontColor: var(--black);
   --btnBg: var(--black);
   --btnFontColor: var(--white);
 }
@@ -58,5 +59,4 @@ body {
  }
  
  .btn:focus { outline-style: none;}
-
 
