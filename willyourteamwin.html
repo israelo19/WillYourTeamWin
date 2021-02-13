@@ -1,16 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="uft-8">
-	<title/>Will Your Team Win?</title>
-	<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
-
-<p id="demo"></p>
-	<link rel="stylesheet" href="willyourteamwin.css">
-
-	function startTime() {
+<script>
+function startTime() {
   var today = new Date();
   var h = today.getHours();
   var m = today.getMinutes();
@@ -25,7 +17,21 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
-	
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+	<meta charset="uft-8">
+	<title/>Will Your Team Win?</title>
+	<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+	<link rel="stylesheet" href="willyourteamwin.css">
 </head>
 <body>
 	<body class="dark-theme"></body>
@@ -45,4 +51,3 @@ function checkTime(i) {
 <noscript>You need to enable JavaScript to view the full sight.</noscript>
 </body>	
 </html>
-	
