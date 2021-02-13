@@ -17,7 +17,8 @@ p {
   --green: #00FF00;
   --white: #ffffff;
   --black: #000000;
-  --lightblue: #ADD8E6
+  --lightblue: #ADD8E6;
+  --grey: #808080
  }
  
  * {
@@ -31,10 +32,31 @@ body {
 
 .light-theme {
   --bg: var(--lightblue);
-  fontColor: var(--white);
+  --fontColor: var(--white);
+  --btnBg: var(--black);
+  --btnFontColor: var(--white);
 }
 
 .dark-theme {
-   --bg: var(--black);
+   --bg: var(--grey);
    --fontColor: var(--white);
+   --btnBg: var(--white);
+   --btnFontColor: var(--black);
+   
 }   
+
+.btn {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  height:50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  color: var(--btnFontColor);
+  background-color: var(--btnBg)
+ }
+ 
+ .btn:focus { outline-style: none;}
+
+
