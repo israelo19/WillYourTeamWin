@@ -1,5 +1,5 @@
 # Python Script
-# 02-03-2021\
+# 02-03-2021
 # Israel Ogwu
 # This is a code that will predict the chance that your Football(Soccer)team will win their league.
 
@@ -11,7 +11,6 @@ from random import randint
 t = ["Liverpool", "Manchester City", "Manchester United", "Leicester City", "West Ham", "Everton", "Tottenham",
      "Chelsea", "Aston Villa", "Arsenal", "Leeds United",
      "Crystal Palace", "Wolves", "Brighton", "Newcastle", "Burnely", "Fulham", "West Brom", "Sheffield United"]
-
 #To add a "," after each Team. This is the "join" funchtion
 s=", "
 s=s.join(t)
@@ -19,7 +18,8 @@ s=s.join(t)
 player = False
 league_wins = False
 league_rank = False
-
+a=False
+p=False
 
 # List of allowed club names
 print ("Choose a club from this list of Preimer Leauge teams: ")
@@ -40,31 +40,53 @@ while player == False:
 while league_wins == False:
     league_wins = int(input ("How many times has this team won the Premier League? (Just the number please. Ex: 5)")) #Wrapped int around input so that the
 # outcome will be a int and not a variable
-    print("Oh, ok. ")
+    if league_wins >= 3:
+      print("Oh that's NICEEEE")
+    elif league_wins <= 2:
+      print("Oooh, ok")
+    league_wins = True
+
 #league_wins will comeback later
 
 while league_rank == False:
     league_rank = int(input("What place is your team in right now? (Just the number please. Ex: 5)"))#Wrapped int around input so that the
+    if league_rank >= 0:
+        print("Oooooooh OK!")
+
+    league_rank = True
+
+    while p == False:
+        p = int(input("What is your team's starting percentage? EX: If team's rank is 1st then starting percentage is 95% "
+                   "If teams rank is 2nd the starting percenttage is 90. As the rank goes down the starting percentage goes down by 5%. Disclaimer: Do not add number with percent sign! Ex: 60"))  # Wrapped int around input so that the
+        if p >= 0:
+            print ("Oooooooh OK!")
+
+        p = True
+
+    while a == False:
+        a = int (input (
+            "How many teams are above your team? Ex: This is out of 20 teams! If you are in 10th place, then 10 teams are above your team. Ex: 10"))  # Wrapped int around input so that the
+        if a >= 0:
+            print ("Oooooooh OK!")
+
+        a = True
+
+o= p+(league_rank/100)*(league_wins^2)-a
+print(o)
+#print(player + " has a " )
+
+#print("chance of winning!")
+
+
+
 # outcome will be a int and not a variable
 #NEED TO ADD "IF NOT A NUMBER PRINT..." "MAKE IT A LOOP!
 #Might come in handy later!
-#print(league_rank * league_wins)
-
-#p=overall Percent
-#w=Leauge Wins
-#h=high rank
-#s=starting percent
-#t=teams above
+#print(league_rank * league_wins)\
 #Equation:p=(s+(H%*w^2)-t
-#w=league_wins
-#h= (abs(league_rank-20)+1)
-#s=
-#t=
 
+#h=(abs(league_rank-20)+1)
 
-
-
-#p=()
 
 # ------------------------------------------------------------------------------------------------------------------------------
 # Function to print a list
