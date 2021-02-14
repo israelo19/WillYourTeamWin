@@ -1,10 +1,9 @@
-
 body {
   background-color:white;
 }
 
 h1 {
-	color:lightblue;
+	color:orange;
 	text-align: center;
 }
 
@@ -19,7 +18,10 @@ p {
   --white: #ffffff;
   --black: #000000;
   --lightblue: #ADD8E6;
-  --grey: #808080
+  --grey: #808080;
+  --yellow:#FFFF00;
+  --orange:#FFA500;
+  
  }
  
  * {
@@ -32,7 +34,7 @@ body {
 }
 
 .light-theme {
-  --bg: var(--lightblue);
+  --bg: var(--yellow);
   --fontColor: var(--black);
   --btnBg: var(--black);
   --btnFontColor: var(--white);
@@ -59,4 +61,5 @@ body {
  }
  
  .btn:focus { outline-style: none;}
+
 
