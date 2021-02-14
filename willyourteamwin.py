@@ -3,8 +3,7 @@
 # Israel Ogwu
 # This is a code that will predict the chance that your Football(Soccer)team will win their league.
 
-# Allows me to use "randint"
-from random import randint
+
 
 
 # List of Soccer/Football Teams in the Premier Leauge(currently)
@@ -21,6 +20,9 @@ league_rank = False
 a=False
 p=False
 
+# Allows me to use "randint"
+from random import randint
+
 # List of allowed club names
 print ("Choose a club from this list of Preimer Leauge teams: ")
 print (s)    # join function in action! Lines 16-17
@@ -36,6 +38,13 @@ while player == False:
 
 #Just in case I want to lop this
 #        player = False
+
+while p == False:
+    p = int(input("What is your team's starting percentage? EX: If team's rank is 1st then starting percentage is 95% If teams rank is 2nd the starting percenttage is 90. As the rank goes down the starting percentage goes down by 5%. Disclaimer: Do not add number with percent sign! Ex: 60"))  # Wrapped int around input so that the
+    if p >= 0:
+        print ("Oooooooh OK!")
+
+    p = True
 
 while league_wins == False:
     league_wins = int(input ("How many times has this team won the Premier League? (Just the number please. Ex: 5)")) #Wrapped int around input so that the
@@ -55,27 +64,23 @@ while league_rank == False:
 
     league_rank = True
 
-    while p == False:
-        p = int(input("What is your team's starting percentage? EX: If team's rank is 1st then starting percentage is 95% "
-                   "If teams rank is 2nd the starting percenttage is 90. As the rank goes down the starting percentage goes down by 5%. Disclaimer: Do not add number with percent sign! Ex: 60"))  # Wrapped int around input so that the
-        if p >= 0:
-            print ("Oooooooh OK!")
 
-        p = True
 
-    while a == False:
-        a = int (input (
-            "How many teams are above your team? Ex: This is out of 20 teams! If you are in 10th place, then 10 teams are above your team. Ex: 10"))  # Wrapped int around input so that the
-        if a >= 0:
-            print ("Oooooooh OK!")
+while a == False:
+    a = int(input("How many teams are above your team? Ex: This is out of 20 teams! If you are in 10th place, then 10 teams are above your team. Ex: 10"))  # Wrapped int around input so that the
+    if a >= 0:
+        print ("Oooooooh OK!")
 
-        a = True
+    a = True
 
-o= p+(league_rank/100)*(league_wins^2)-a
-print(o)
-#print(player + " has a " )
-
+#r=(p+league_rank+league_wins)-a
+#print(r)
 #print("chance of winning!")
+print(player + " Has a ")
+print(randint(70,89))
+print("percent chance to win the league!")
+#o=(league_wins*league_rank)
+#print(o)
 
 
 
